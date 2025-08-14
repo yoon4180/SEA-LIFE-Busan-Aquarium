@@ -1,0 +1,395 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SEA LIFE BUSAN AQUARIUM_redesign</title>
+    <!-- Link Swiper's CSS -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
+    <!-- Swiper JS -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <!-- Initialize Swiper -->
+    <script>
+        window.onload = () => {
+            //메인비주얼 효과
+            var swiper = new Swiper(".main_img", {
+                spaceBetween: 30,
+                centeredSlides: true,
+                autoplay: {
+                    delay: 4000,
+                    disableOnInteraction: false,
+                },
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                effect: "fade",
+            });
+
+            //cont-1 슬라이드 효과
+            var swiper = new Swiper(".drag", {
+                slidesPerView: 3.5,
+                spaceBetween: 24,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+            });
+
+            //cont-2 슬라이드 효과
+            var swiper = new Swiper(".cont-2-2", {
+                slidesPerView: 3,
+                spaceBetween: 24,
+                pagination: {
+                    el: ".swiper-pagination",
+                    clickable: true,
+                },
+                navigation: {
+                    nextEl: ".swiper-button-next",
+                    prevEl: ".swiper-button-prev",
+                },
+            });
+        }; //script end
+    </script>
+    <link rel="stylesheet" href="css/index.css">
+
+</head>
+
+<body>
+    <header class="top_header">
+        <div class="link">
+            <div class="sealife">
+                <img src="icon/jellyfish.png" alt="">
+                <p>씨라이프</p>
+            </div><!-- sealife end -->
+            <div class="brick">
+                <img src="icon/brick.png" alt="">
+                <a href="#">브릭맨 원더월드</a>
+            </div><!-- brick end -->
+        </div><!-- link end -->
+        <div class="nav">
+            <div class="inner">
+                <ul class="text">
+                    <li><a href="#">해양생물보호</a></li>
+                    <li><a href="#">회사소개</a></li>
+                    <li><a href="#">뉴스레터</a></li>
+                </ul><!-- text end -->
+                <div class="lang_button">
+                    <p>KOR</p>
+                    <img src="icon/fi_chevron-down.png" alt="">
+                </div><!-- lang_button end -->
+            </div><!-- inner end -->
+        </div><!-- nav end -->
+    </header><!-- top_header end -->
+
+    <header class="header">
+        <div class="inner">
+            <img src="logo/sea-life-busan-white.png" alt="" class="logo">
+            <div class="nav">
+                <ul>
+                    <li><a href="#">온라인 예매</a></li>
+                    <li><a href="#">아쿠아리움 소개</a></li>
+                    <li><a href="#">체험·공연 안내</a></li>
+                    <li><a href="#">이용안내</a></li>
+                    <li><a href="#">고객센터</a></li>
+                </ul>
+                <img src="icon/icon.png" alt="">
+            </div><!-- nav end -->
+        </div><!-- inner end -->
+    </header><!-- header end -->
+
+    <main class="main">
+        <section class="main_visual">
+            <!-- Swiper -->
+            <div class="swiper main_img">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide">
+                        <img src="img/main_visual5.jpg" alt="">
+                    </div><!-- swiper-slide end -->
+                    <div class="swiper-slide">
+                        <img src="img/main_visual1.jpg" alt="">
+                    </div><!-- swiper-slide end -->
+                    <div class="swiper-slide">
+                        <img src="img/main_visual2.jpg" alt="">
+                    </div><!-- swiper-slide end -->
+                    <div class="swiper-slide">
+                        <img src="img/main_visual3.jpg" alt="">
+                    </div><!-- swiper-slide end -->
+                    <div class="swiper-slide">
+                        <img src="img/main_visual4.jpg" alt="">
+                    </div><!-- swiper-slide end -->
+                    <div class="swiper-slide">
+                        <img src="img/main_visual6.jpg" alt="">
+                    </div><!-- swiper-slide end -->
+                </div><!-- swiper-wrapper end -->
+            </div><!-- swiper .main end -->
+            <div class="op_time">
+                <h3>운영시간</h3>
+                <ul class="text">
+                    <li>· 09:00~20:00</li>
+                    <li>· 입장마감 17:00</li>
+                    <li>· 연중무휴</li>
+                </ul>
+            </div><!-- op_time end -->
+            <div class="service">
+                <div class="location">
+                    <h3>오시는 길</h3>
+                    <img src="icon/u_location-pin-alt.png" alt="">
+                </div><!-- location end -->
+                <div class="facilities">
+                    <h3>편의시설</h3>
+                    <img src="icon/u_wheelchair(fff).png" alt="">
+                </div><!-- facilities end -->
+
+            </div><!-- service end -->
+        </section><!-- main_visual end -->
+    </main><!-- main end -->
+
+    <section class="cont-1">
+        <div class="inner">
+            <h2>나에게 꼭 맞는 티켓을 골라보세요!</h2>
+            <div class="cont-1-1">
+                <div class="select">
+                    <ul>
+                        <li>당일 입장권</li>
+                        <li>사전 예매권</li>
+                        <li>연간 회원권</li>
+                        <li>액티비티 패키지</li>
+                        <li>기업체 입장권</li>
+                    </ul>
+                </div><!-- select end -->
+                <!-- Swiper -->
+                <div class="swiper drag">
+                    <div class="swiper-wrapper items">
+                        <div class="swiper-slide item">
+                            <img src="img/ticket1.jpg" alt="">
+                            <h4>SEA LIFE 입장권</h4>
+                            <div class="text">
+                                <div class="text-01">
+                                    <small>소인</small>
+                                    <strong>21,000원</strong>
+                                </div><!-- text-01 end -->
+                                <div class="text-01">
+                                    <small>대인</small>
+                                    <strong>26,500원</strong>
+                                </div><!-- text-01 end -->
+                            </div><!-- text end -->
+                        </div><!-- swiper-slide item end -->
+                        <div class="swiper-slide item">
+                            <img src="img/ticket2.jpg" alt="">
+                            <h4>1인 + 디지털 사진</h4>
+                            <div class="text">
+                                <div class="text-01">
+                                    <small>최소</small>
+                                    <strong>28,000원</strong>
+                                </div><!-- text-01 end -->
+                                <div class="text-01">
+                                    <small>최대</small>
+                                    <strong>32,000원</strong>
+                                </div><!-- text-01 end -->
+                            </div><!-- text end -->
+                        </div><!-- swiper-slide item end -->
+                        <div class="swiper-slide item">
+                            <img src="img/ticket3.jpg" alt="">
+                            <h4>2인 + 디지털 사진</h4>
+                            <div class="text">
+                                <div class="text-01">
+                                    <small>최소</small>
+                                    <strong>54,000원</strong>
+                                </div><!-- text-01 end -->
+                                <div class="text-01">
+                                    <small>최대</small>
+                                    <strong>64,000원</strong>
+                                </div><!-- text-01 end -->
+                            </div><!-- text end -->
+                        </div><!-- swiper-slide item end -->
+                        <div class="swiper-slide item">
+                            <img src="img/ticket4.webp" alt="">
+                            <h4>1인 + VR 패키지</h4>
+                            <div class="text">
+                                <div class="text-01">
+                                    <small>소인</small>
+                                    <strong>29,500원</strong>
+                                </div><!-- text-01 end -->
+                                <div class="text-01">
+                                    <small>대인</small>
+                                    <strong>33,000원</strong>
+                                </div><!-- text-01 end -->
+                            </div><!-- text end -->
+                        </div><!-- swiper-slide item end -->
+                    </div><!-- swiper-wrapper items end -->
+                </div><!-- swiper drag end -->
+    </section><!-- cont-1 end -->
+
+    <section class="cont-2">
+        <div class="inner">
+            <div class="cont-2-1">
+                <h2>다양하고 신비한 즐길거리!</h2>
+                <ul class="select">
+                    <li>전시존</li>
+                    <li>공연</li>
+                    <li>체험시설</li>
+                    <li>설명회</li>
+                </ul>
+            </div><!-- cont-2-1 end -->
+            <!-- Swiper -->
+            <div class="swiper cont-2-2">
+                <div class="swiper-wrapper list">
+                    <div class="swiper-slide item">
+                        <img src="img/sec2-1.webp" alt="" class="lab">
+                        <div class="cont">
+                            <h4>해파리 연구소</h4>
+                            <p>해파리 연구소 박사님이 되어 알록달록 해파리</br>
+                                친구들의 신비한 비밀에 대해서 알아볼까요?</p>
+                            <div class="loc">
+                                <img src="icon/loc.png" alt="">
+                                <span>지하 3층</span>
+                            </div><!-- loc end -->
+                        </div><!-- cont end -->
+                    </div><!-- swiper-slide item end -->
+                    <div class="swiper-slide item">
+                        <img src="img/sec2-2.webp" alt="" class="lab">
+                        <div class="cont">
+                            <h4>바다거북 구조대</h4>
+                            <p>구조해서 돌려보내기까지 어떻게 이루어질까?</br>
+                                여러분도 바다거북 구조대가 되어 보세요!</p>
+                            <div class="loc">
+                                <img src="icon/loc.png" alt="">
+                                <span>지하 3층</span>
+                            </div><!-- loc end -->
+                        </div><!-- cont end -->
+                    </div><!-- swiper-slide item end -->
+                    <div class="swiper-slide item">
+                        <img src="img/sec2-3.webp" alt="" class="lab">
+                        <div class="cont">
+                            <h4>Sea at Night(씨앳나잇)</h4>
+                            <p>최첨단 디지털 기술로 수심 4,500m 속으로</br>
+                                신비로운 심해 세계를 생생하게 체험해 보세요!</p>
+                            <div class="loc">
+                                <img src="icon/loc.png" alt="">
+                                <span>지하 3층</span>
+                            </div><!-- loc end -->
+                        </div><!-- cont end -->
+                    </div><!-- swiper-slide item end -->
+                    <div class="swiper-slide item">
+                        <img src="img/sec2-1.webp" alt="" class="lab">
+                        <div class="cont">
+                            <h4>해파리 연구소</h4>
+                            <p>해파리 연구소 박사님이 되어 알록달록 해파리</br>
+                                친구들의 신비한 비밀에 대해서 알아볼까요?</p>
+                            <div class="loc">
+                                <img src="icon/loc.png" alt="">
+                                <span>지하 3층</span>
+                            </div><!-- loc end -->
+                        </div><!-- cont end -->
+                    </div><!-- swiper-slide item end -->
+                </div><!-- swiper-wrapper list end -->
+                <div class="swiper-button-next"></div>
+                <div class="swiper-button-prev"></div>
+            </div><!-- cont-2-2 end -->
+        </div><!-- inner end -->
+    </section><!-- cont-2 end -->
+
+    <section class="cont-3">
+        <div class="bg">
+            <img src="img/wave1.png" alt="" class="wave1">
+            <div class="cont-3-1">
+                <h2>씨라이프 부산에서</br>
+                    만날 수 있는 해양 친구들</h2>
+                <div class="list">
+                    <div class="item">
+                        <img src="img/sec3-1.jpg" alt="">
+                        <p>해마</p>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <img src="img/sec3-2.webp" alt="">
+                        <p>바다거북</p>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <img src="img/sec3-3.webp" alt="">
+                        <p>작은발톱수달</p>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <img src="img/sec3-4.webp" alt="">
+                        <p>보름달물 해파리</p>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <img src="img/sec3-5.webp" alt="">
+                        <p>스플렌디드 가든일</p>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <img src="img/sec3-6.webp" alt="">
+                        <p>자사크펭귄</p>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <img src="img/sec3-7.webp" alt="">
+                        <p>카우노즈레이</p>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <img src="img/sec3-8.webp" alt="">
+                        <p>나폴레옹피시</p>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <img src="img/sec3-9.webp" alt="">
+                        <p>샌드타이거 상어</p>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <div class="overlay-img">
+                            <img src="img/sec3-10.jpg" alt="">
+                            <h4>250여 종의</br>친구들이</br>더 있어요!</h4>
+                        </div>
+                    </div><!-- item end -->
+                </div><!-- list end -->
+            </div><!-- cont3-1 end -->
+        </div><!-- bg end -->
+    </section><!-- cont-3 end -->
+
+    <section class="cont-4">
+        <div class="inner">
+            <h2>씨라이프 부산에 대해서 더 알고싶다면?</h2>
+            <div class="list">
+                <div class="left">
+                    <div class="text">
+                        <strong>뉴스레터</br>구독신청</strong>
+                        <p>SEA LIFE 부산 아쿠아리움의</br>
+                            최신 이벤트 및 프로모션을 이메일로 받아보세요!</p>
+                        <div class="sub-button">
+                            <p>example@example.com</p>
+                            <p>구독신청</p>
+                        </div><!-- sub-button -->
+                    </div><!-- text end -->
+                </div><!-- left end -->
+
+                <div class="right">
+                    <div class="item">
+                        <h4>오시는 길</br>& 주차 안내</h4>
+                        <div class="icon">
+                            <img src="icon/u_location-pin-alt(fff).png" alt="">
+                        </div>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <h4>편의시설</h4>
+                        <div class="icon">
+                            <img src="icon/u_wheelchair(fff).png" alt="">
+                        </div>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <h4>층별 지도</h4>
+                        <div class="icon">
+                            <img src="icon/mingcute_map-line(fff).png" alt="">
+                        </div>
+                    </div><!-- item end -->
+                    <div class="item">
+                        <h4>카카오톡 상담</h4>
+                        <div class="icon">
+                            <img src="img/kakaoQR.webp" alt="">
+                        </div>
+                    </div><!-- item end -->
+                </div><!-- right end -->
+            </div><!-- list end -->
+        </div><!-- inner end -->
+    </section><!-- cont-4 end -->
+</body>
+
+</html>

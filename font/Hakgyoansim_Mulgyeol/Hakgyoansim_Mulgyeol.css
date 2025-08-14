@@ -1,0 +1,18 @@
+@font-face {
+    font-family: 'Hakgyoansim Mulgyeol R';
+    src: url('TTHakgyoansimMulgyeolR.woff2') format('woff2'),
+        url('TTHakgyoansimMulgyeolR.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Hakgyoansim Mulgyeol B';
+    src: url('TTHakgyoansimMulgyeolB.woff2') format('woff2'),
+        url('TTHakgyoansimMulgyeolB.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
