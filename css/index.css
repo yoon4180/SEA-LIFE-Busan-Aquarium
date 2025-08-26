@@ -102,6 +102,11 @@ body {
     color: #141e55;
 }
 
+button {
+    background-color: transparent;
+    border: 0;
+}
+
 .top_header {
     height: 40px;
     background-color: #141E55;
@@ -206,24 +211,72 @@ body {
     font-size: 20px;
 }
 
+/* 씨라이프 헤더 로고 */
 .header .inner .logo {
     height: 55px;
 }
 
-.header .inner .nav {
-    display: flex;
-}
-
-.header .inner .nav ul {
+.header .inner .nav .gnb {
     display: flex;
     align-items: center;
     text-align: center;
 }
 
-.header .inner .nav li {
-    width: 190px;
+.header .inner .nav .gnb>li {
+    position: relative;
 }
 
+.header .inner .nav .gnb>li .depth-01 {
+    width: 200px;
+    height: 80px;
+    align-content: center;
+    font-size: 20px;
+    display: block;
+}
+
+.header .inner .nav .gnb>li .depth-01 a {
+    width: 100%;
+    height: 100%;
+}
+
+.header .inner .nav .gnb>li .depth-02 {
+    z-index: 100;
+    position: absolute;
+    width: 100%;
+    padding: 30px 0;
+    top: 80px;
+    background-color: rgba(43, 55, 123, 0.85);
+    border-top: 4px solid #fff;
+    display: none;
+    /* hover */
+    flex-direction: column;
+    row-gap: 50px;
+}
+
+.header .inner .nav .gnb>li:hover .depth-02 {
+    display: flex;
+}
+
+.header .inner .nav .gnb>li .depth-02>li {
+    font-size: 18px;
+    color: #fff0c7;
+    font-weight: 500;
+}
+
+.header .inner .nav .gnb>li .depth-02>li .depth-03 {
+    font-size: 16px;
+    font-weight: 200;
+    color: #fff;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.header .inner .nav .gnb>li .depth-02>li .depth-03 li:first-child {
+    margin-top: 15px;
+}
+
+/* 햄버거 메뉴 이미지 넣어야됨*/
 .header .inner .nav img {
     width: 50px;
     height: 50px;
@@ -251,7 +304,7 @@ body {
     object-fit: cover;
 }
 
-.main .main_visual h3 {
+.main .main_visual strong {
     font-family: 'Hakgyoansim Mulgyeol R';
     font-size: 30px;
     font-weight: normal;
@@ -310,8 +363,12 @@ body {
     transition: all 0.4s;
 }
 
+.main .main_visual .service img {
+    width: 55px;
+}
+
 .main .main_visual .service .location:hover {
-    background-color: rgba(136, 162, 215, 1);
+    background-color: rgb(128, 169, 252);
 }
 
 .main .main_visual .service .facilities {
@@ -324,10 +381,11 @@ body {
     justify-content: space-between;
     align-items: center;
     padding: 50px;
+    transition: all 0.4s;
 }
 
 .main .main_visual .service .facilities:hover {
-    background-color: rgba(43, 55, 123, 1);
+    background-color: rgb(24, 41, 136);
 }
 
 h2 {
@@ -336,14 +394,42 @@ h2 {
     font-weight: normal;
 }
 
-h4 {
+h3 {
     font-size: 25px;
     font-weight: 700;
 }
 
+
+/* 물고기 이미지 모션 */
+.fish01 {
+    position: absolute;
+    background-repeat: no-repeat;
+    /* 반복 안함 */
+    animation: swim 10s infinite;
+    opacity: 50%;
+}
+
+@keyframes swim {
+    from {
+        left: -500px;
+    }
+
+    to {
+        left: 100vw;
+    }
+}
+
+
 .cont-1 {
     padding: 300px 0;
     display: block;
+    position: relative;
+}
+
+.cont-1 .inner .deco1 {
+    position: absolute;
+    top: 211px;
+    right: 0;
 }
 
 .cont-1 .inner h2 {
@@ -404,6 +490,13 @@ h4 {
     border-radius: 20px;
     background-color: #fff;
     overflow: hidden;
+    transition: all 0.3s;
+}
+
+.cont-1 .inner .cont-1-1 .drag .items .item:hover {
+    /* cont-1 hover */
+    transform: scale(1.05);
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.6);
 }
 
 .cont-1 .inner .cont-1-1 .drag .items .item img {
@@ -413,7 +506,7 @@ h4 {
     object-fit: cover;
 }
 
-.cont-1 .inner .cont-1-1 .drag .items .item h4 {
+.cont-1 .inner .cont-1-1 .drag .items .item h3 {
     margin: 20px 0 30px 24px;
 }
 
@@ -424,7 +517,12 @@ h4 {
     gap: 20px;
 }
 
-.cont-1 .inner .cont-1-1 .drag .items .item .text .text-01 small {
+.cont-1 .inner .cont-1-1 .drag .items .item .text .text-01 {
+    display: flex;
+    align-items: center;
+}
+
+.cont-1 .inner .cont-1-1 .drag .items .item .text .text-01 p {
     font-size: 20px;
     margin-right: 10px;
 }
@@ -432,6 +530,30 @@ h4 {
 .cont-1 .inner .cont-1-1 .drag .items .item .text .text-01 strong {
     font-size: 25px;
     font-weight: 600;
+}
+
+
+/* 물고기 이미지 모션 2 */
+.fish02 {
+    position: absolute;
+    background-repeat: no-repeat;
+    /* 반복 안함 */
+    animation: swim-left 10s infinite;
+    bottom: -1650px;
+    z-index: -1;
+}
+
+@keyframes swim-left {
+    from {
+        left: 100vw;
+    }
+
+    /* 화면 오른쪽 바깥 */
+    to {
+        left: -500px;
+    }
+
+    /* 화면 왼쪽 바깥 */
 }
 
 .cont-2 .inner .cont-2-1 {
@@ -460,20 +582,46 @@ h4 {
 }
 
 .cont-2 .inner .cont-2-1 .select li:hover {
+    /* cont-2 hover */
     background-color: #141E55;
+}
+
+.cont-2 .inner .cont-2-1 .select li:first-child {
+    /* cont-2 hover */
+    background-color: #141E55;
+}
+
+.cont-2 .inner .position {
+    width: 1440px;
+    position: relative;
+    margin: 0 auto;
 }
 
 .cont-2 .inner .cont-2-2 {
     width: 1440px;
+    position: static;
 }
 
-.cont-2 .inner .cont-2-2 .list .item .lab {
+.cont-2 .inner .cont-2-2 .list .item .item-img {
     width: 100%;
     height: 600px;
     object-fit: cover;
     border-radius: 80px 0 80px 0;
     margin-bottom: 30px;
     box-shadow: 5px 5px 10px rgba(43, 55, 123, 0.5);
+    overflow: hidden;
+}
+
+.cont-2 .inner .cont-2-2 .list .item .lab {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.3s;
+}
+
+.cont-2 .inner .cont-2-2 .list .item:hover .lab {
+    /* cont-2 hover */
+    transform: scale(1.1);
 }
 
 .cont-2 .inner .cont-2-2 .list .item .cont {
@@ -498,11 +646,39 @@ h4 {
     height: 25px;
 }
 
+.swiper-button-prev,
+.swiper-rtl .swiper-button-next {
+    background: url('../icon/fi_chevron-left.png') center center / 100% no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 275px;
+    left: -50px;
+}
+
+.swiper-button-next,
+.swiper-rtl .swiper-button-prev {
+    background: url('../icon/fi_chevron-right.png') center center / 100% no-repeat;
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    top: 275px;
+    right: -50px;
+}
+
+.swiper-button-prev:after,
+.swiper-rtl .swiper-button-next:after,
+.swiper-button-next:after,
+.swiper-rtl .swiper-button-prev:after {
+    display: none;
+}
+
 .cont-3 .bg {
     width: 100%;
     margin-top: 250px;
     padding: 50px 0 100px;
-    background-color: #141E55;
+    background: #141E55;
+    background: linear-gradient(180deg, rgba(20, 30, 85, 1) 0%, rgba(33, 42, 112, 1) 71%, rgba(52, 34, 156, 1) 100%);
     color: #fff;
     position: relative;
 }
@@ -510,8 +686,38 @@ h4 {
 .cont-3 .bg .wave1 {
     width: 100%;
     position: absolute;
-    top: -145px;
+    transform: translateY(-100%);
+    top: 0;
     right: 0;
+}
+
+.cont-3 .bg .deco2 {
+    position: absolute;
+    top: 0;
+    left: 42%;
+}
+
+.cont-3 .bg .deco3 {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.cont-3 .bg .deco3 img {
+    display: block;
+}
+
+.cont-3 .bg .deco4 {
+    width: 275px;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+
+}
+
+.cont-3 .bg .deco4 img {
+    width: 100%;
+    display: block;
 }
 
 .cont-3 .bg .cont-3-1 {
@@ -576,7 +782,7 @@ h4 {
     transform: scale(1.2);
 }
 
-.cont-3 .bg .cont-3-1 .list .item .overlay-img h4 {
+.cont-3 .bg .cont-3-1 .list .item .overlay-img h3 {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -588,10 +794,17 @@ h4 {
 .cont-4 {
     width: 1440px;
     margin: 200px auto 150px;
+    position: relative;
 }
 
 .cont-4 h2 {
     margin-bottom: 60px;
+}
+
+.cont-4 .deco5 {
+    position: absolute;
+    top: -90px;
+    right: -120px;
 }
 
 .cont-4 .list {
@@ -717,7 +930,8 @@ h4 {
 
 .footer {
     width: 100%;
-    background-color: #141E55;
+    background: #2B377B;
+    background: linear-gradient(180deg, rgba(43, 55, 123, 1) 0%, rgb(11, 19, 59) 100%);
     padding: 50px 0;
     font-weight: 300;
 }
@@ -769,6 +983,8 @@ h4 {
     font-size: 13px;
     line-height: 2;
     margin-bottom: 50px;
+    display: flex;
+    flex-direction: column;
 }
 
 .footer .right .sns {
@@ -789,8 +1005,17 @@ h4 {
     transition: all 0.3s;
 }
 
-.footer .right .sns .item:hover {
-    background-color: #fff0c7;
+.footer .right .sns .item:nth-child(1):hover {
+    background: #ffdb70;
+    background: linear-gradient(41deg, rgba(255, 219, 112, 1) 0%, rgba(232, 42, 96, 1) 47%, rgba(179, 79, 209, 1) 100%);
+}
+
+.footer .right .sns .item:nth-child(2):hover {
+    background-color: #f75a5a;
+}
+
+.footer .right .sns .item:nth-child(3):hover {
+    background-color: #6988f0;
 }
 
 .footer .right .sns .item img {
