@@ -97,6 +97,8 @@ li {
 }
 
 body {
+    width: 100%;
+    overflow-x: hidden;
     background-color: rgba(136, 162, 215, 0.3);
     font-family: 'Pretendard';
     color: #141e55;
