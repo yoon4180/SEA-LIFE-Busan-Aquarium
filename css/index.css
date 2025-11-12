@@ -85,6 +85,7 @@
     margin: 0;
     padding: 0;
     box-sizing: border-box;
+    cursor: url('../icon/cursor_starfish.png') 16 16, auto;
 }
 
 a {
@@ -96,12 +97,14 @@ li {
     list-style: none;
 }
 
+
 body {
     width: 100%;
     overflow-x: hidden;
     background-color: rgba(136, 162, 215, 0.3);
     font-family: 'Pretendard';
     color: #141e55;
+    
 }
 
 button {
