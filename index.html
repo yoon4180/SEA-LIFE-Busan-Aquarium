@@ -75,10 +75,11 @@
                     <li><a href="#">회사소개</a></li>
                     <li><a href="#">뉴스레터</a></li>
                 </ul><!-- text end -->
-                <div class="lang_button">
-                    <p>KOR</p>
-                    <img src="icon/fi_chevron-down.png" alt="#">
-                </div><!-- lang_button end -->
+                <select name="lang_btn" class="lang_button">
+                    <option value="kor" selected>KOR</option>
+                    <option value="Eng">ENG</option>
+                    <option value="Jap">JAP</option>
+                </select><!-- lang_button end -->
             </div><!-- inner end -->
         </div><!-- nav end -->
     </header><!-- top_header end -->
@@ -120,7 +121,7 @@
                                     <li><a href="#">해마 존</a></li>
                                     <li><a href="#">수달 존</a></li>
                                     <li><a href="#">락풀 체험장</a></li>
-                                    <li><a href="#">씨앳나잇(Sea at Night)</a></li>
+                                    <li><a href="#">씨앳나잇</a></li>
                                 </ul><!-- depth-03 -->
                             </li>
                             <li><a href="#">· SEA LIFE 부산 친구들</a>
@@ -200,7 +201,7 @@
         </div><!-- inner end -->
     </header><!-- header end -->
 
-    
+
 
     <main class="main">
         <section class="main_visual">
@@ -604,32 +605,38 @@
                         <span>사업자등록번호 617-81-61162ㅣ대표이사 이성호,로버트마크스미스ㅣ통신판매업신고번호 제 2006-부산해운-66423호</span>
                     </div><!-- location end -->
                     <div class="pic">
-                        <img src="logo/merlin_reverse_logo.webp" alt="로고">
-                        <img src="logo/clean-zone.png" alt="로고">
+                        <img src="logo/merlin_reverse_logo.webp" alt="merlin 로고">
+                        <img src="logo/clean-zone.png" alt="clean-zone 로고">
                     </div><!-- pic end -->
                 </div><!-- content end -->
             </div><!-- left end -->
             <div class="right">
                 <div class="sns">
                     <div class="item">
-                        <img src="icon/instagram.png" alt="아이콘">
+                        <a href="https://www.instagram.com/sealifebusan/"><img src="icon/instagram.png" alt="인스타아이콘"></a>
                     </div><!-- item end -->
                     <div class="item">
-                        <img src="icon/youtube.png" alt="아이콘">
+                        <a href="https://www.youtube.com/user/BusanAquarium" target="_blank"><img src="icon/youtube.png" alt="유튜브아이콘"></a>
                     </div><!-- item end -->
                     <div class="item">
-                        <img src="icon/facebook.png" alt="아이콘">
+                        <a href="https://www.facebook.com/sealifebusanaquarium"><img src="icon/facebook.png" alt="페이스북아이콘"></a>
                     </div><!-- item end -->
                 </div><!-- sns end -->
                 <div class="button">
-                    <div class="connect">
-                        <p>더 많은 SEA LIFE</p>
-                        <img src="icon/fi_chevron-down.png" alt="아이콘">
-                    </div><!-- connect end -->
-                    <div class="connect">
-                        <p>KOR</p>
-                        <img src="icon/fi_chevron-down.png" alt="아이콘">
-                    </div><!-- connect end -->
+                    <select name="branches" class="connect">
+                        <option value="" selected disabled hidden>더 많은 SEA LIFE</option>
+                        <option value="영국&아일랜드">영국&아일랜드</option>
+                        <option value="독일">독일</option>
+                        <option value="유럽">유럽</option>
+                        <option value="북아메리카">북아메리카</option>
+                        <option value="아시아">아시아</option>
+                        <option value="호주&뉴질랜드">호주&뉴질랜드</option>
+                    </select><!-- connect end -->
+                    <select name="lang_btn" class="connect">
+                        <option value="kor" selected>KOR</option>
+                        <option value="Eng">ENG</option>
+                        <option value="Jap">JAP</option>
+                    </select><!-- lang_button end -->
                 </div><!-- button end -->
             </div><!-- right end -->
         </div><!-- inner end -->
