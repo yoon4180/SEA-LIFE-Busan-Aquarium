@@ -270,6 +270,11 @@ button {
     display: flex;
     flex-direction: column;
     gap: 20px;
+    transition: all 0.2s ease;
+}
+
+.header .inner .nav .gnb>li .depth-02>li .depth-03:hover {
+    font-weight: 500;
 }
 
 .header .inner .nav .gnb>li .depth-02>li .depth-03 li:first-child {
