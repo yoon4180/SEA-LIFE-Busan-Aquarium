@@ -13,6 +13,14 @@
     <script>
         window.onload = () => {
 
+            //햄버거 메뉴
+            const menuBtn = document.querySelector('.menu_btn');
+            const nav = document.querySelector('.nav');
+
+            menuBtn.addEventListener('click', function() {
+                nav.classList.toggle('active');
+            })
+
             //메인비주얼 효과
             var swiper = new Swiper(".main_img", {
                 spaceBetween: 30,
@@ -49,6 +57,10 @@
                 navigation: {
                     nextEl: ".swiper-button-next",
                     prevEl: ".swiper-button-prev",
+                },
+                autoplay: {
+                    delay: 2500,
+                    disableOnInteraction: false,
                 },
             });
         }; //script end
@@ -645,8 +657,6 @@
             </div><!-- right end -->
         </div><!-- inner end -->
     </footer><!-- footer end -->
-
-    <div class="cursor"></div>
 </body>
 
 </html>
