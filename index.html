@@ -15,7 +15,7 @@
 
             //햄버거 메뉴
             const menuBtn = document.querySelector('.menu_btn');
-            const nav = document.querySelector('.nav');
+            const nav = document.getElementsByClassName('nav')[1];//nav클래스 여러개라 인덱스값 필요
 
             menuBtn.addEventListener('click', function() {
                 nav.classList.toggle('active');
@@ -547,7 +547,7 @@
                         <p>SEA LIFE 부산 아쿠아리움의</br>
                             최신 이벤트 및 프로모션을 이메일로 받아보세요!</p>
                         <div class="sub-button">
-                            <p>example@example.com</p>
+                            <input type="text" name="e-mail" id="e-mail" required placeholder="example@example.com">
                             <p>구독신청</p>
                         </div><!-- sub-button -->
                     </div><!-- text end -->
